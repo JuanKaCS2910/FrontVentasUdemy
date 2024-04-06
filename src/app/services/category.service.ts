@@ -6,7 +6,8 @@ import { CategoryApi } from '../responses/category/category.response';
 import { environment as env } from 'src/environments/environment';
 import { endpoint } from '@shared/apis/endpoint';
 import { ListcategoryRequest } from '../requests/download/category/list-category.request';
-import { map } from 'rxjs/operator
+import { map } from 'rxjs/operators';
+ //import { map } from 'rxjs/operator';
 
 @Injectable({
   providedIn: 'root'
@@ -34,13 +35,13 @@ export class CategoryService {
         data.data.items.forEach(function(e:any){
           switch(e.state){
             case 0:
-              e.badgeColor = "text-gray bg-gray-light";
+              e.badgeColor = 'text-gray bg-gray-light';
               break;
             case 1:
-              e.badgeColor = "text-green bg-green-light";
+              e.badgeColor = 'text-green bg-green-light';
               break;
            default:
-              e.badgeColor = "text-gray bg-gray-light";
+              e.badgeColor = 'text-gray bg-gray-light';
               break;
           }
         });
